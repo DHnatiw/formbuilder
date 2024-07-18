@@ -63,10 +63,10 @@ const FormBuilder = () => {
 
     return (
         <div className="flex h-full w-full">
-            <div className='w-1/6'>
+            <div className='w-60' >
                 <Toolbar isMinimized={isToolbarMinimized} setIsMinimized={setIsToolbarMinimized} />
             </div>
-            <div className='w-4/6 h-screen'>
+            <div className='w-full h-screen'>
             <div
                 id="form-builder"
                 onDragOver={(e) => e.preventDefault()}
@@ -84,7 +84,8 @@ const FormBuilder = () => {
                             updatePositionAndSize(el.id, position.x, position.y, ref.offsetWidth, ref.offsetHeight)
                         }
                         bounds="#form-builder"
-                        className="absolute border-2 border-transparent hover:border-blue-500 hover:shadow-lg cursor-move"
+                        className="absolute border-2 border-transparent hover:border-blue-500 hover:shadow-lg cursor-move p-2 rounded transition duration-300 ease-in-out"
+                        style={{ transitionProperty: 'border, box-shadow' }}
                         enableResizing={{
                             top: true,
                             right: true,
@@ -108,7 +109,7 @@ const FormBuilder = () => {
                 ))}
             </div>
             </div>
-            <div className='w-1/6'>
+            <div className='w-60'>
                 <PropertyPanel
                     isMinimized={isPropertyPanelMinimized}
                     setIsMinimized={setIsPropertyPanelMinimized}

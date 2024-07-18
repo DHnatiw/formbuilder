@@ -9,6 +9,9 @@ module.exports = {
                 primary: '#1DA1F2', // Example primary color (Twitter blue)
                 secondary: '#FFD700', // Example secondary color (Gold)
             },
+            maxWidth: {
+                '1/6': '16.666667%',
+            },            
         },
     },
     plugins: [],
